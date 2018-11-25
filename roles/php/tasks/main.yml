@@ -3,11 +3,10 @@
   yum: name={{ item }} state=present
   with_items:
     - php
-    - php70-php
-    - php70-php-mbstring
-    - php70-php-mysql
-    - php70-php-gd
-    - php70-php-pear
+    - php-mbstring
+    - php-mysql
+    - php-gd
+    - php-pear
 
 - name: Copy php70 configuration
   template: src=httpd.conf dest=/etc/httpd/conf/httpd.conf
