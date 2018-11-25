@@ -3,7 +3,18 @@
   yum_repository:
     name: rhui
     enabled: yes
-    
+
+- name: yum | enable rhui repository
+  yum_repository:
+    name: rhui
+    description: "Red Hat Enterprise Linux Server 7 Optional (RPMs) - $basearch"
+    mirrorlist: "https://rhui2-cds01.REGION.aws.ce.redhat.com/pulp/mirror/content/dist/rhel/rhui/server/7/7Server/x86_64/optional/os"
+    failovermethod: priority
+#    gpgkey: 
+    gpgcheck: yes
+    enabled: yes
+
+
 #- name: Update repository
 #  command: yum-config-manager --enable rhui-REGION-rhel-server-extras rhui-REGION-rhel-server-optional
 
