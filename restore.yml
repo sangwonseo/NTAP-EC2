@@ -1,5 +1,5 @@
 ---
--host: wordpress-server
+-host: tag_Env_Demo
 tasks:
   - name: Restore database
     mysql_db:
