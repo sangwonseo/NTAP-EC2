@@ -1,5 +1,6 @@
 ---
-- host: tag_Env_Demo
+- name: restore DB data 
+  hosts: tag_Env_Demo
   remote_user: ec2-user
   # remote_user: user
   sudo: yes
