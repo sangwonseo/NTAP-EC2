@@ -1,9 +1,9 @@
 ---
-- name: yum | enable rhui repository
-  yum_repository:
-    name: rhui-REGION-rhel-server-optional
-    enabled: yes
-
+#- name: yum | enable rhui repository
+#  yum_repository:
+#    name: rhui-REGION-rhel-server-optional
+#    enabled: yes
+#
 #- name: yum | enable rhui repository
 #  yum_repository:
 #    name: rhui-REGION-rhel-server-optional
@@ -13,16 +13,16 @@
 #    gpgkey: 
 #    gpgcheck: yes
 #    enabled: yes
-
-
+#
+#
 #- name: Update repository
 #  command: yum-config-manager --enable rhui-REGION-rhel-server-extras rhui-REGION-rhel-server-optional
-
-#- name: Copy the EPEL repository definition
-#  copy: src=epel.repo dest=/etc/yum.repos.d/
 #
-#- name: Copy the REMI repository definition
-#  copy: src=remi.repo dest=/etc/yum.repos.d/
+- name: Copy the RHUI repository definition
+  copy: src=redhat-rhui.repo dest=/etc/yum.repos.d/
+#
+- name: Copy the RHUI-Client repository definition
+  copy: src=redhat-rhui-client-config.repo dest=/etc/yum.repos.d/
 #
 #- name: Create the GPG key for Apache
 #  copy: src=RPM-GPG-KEY-NGINX dest=/etc/pki/rpm-gpg
