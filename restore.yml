@@ -1,5 +1,5 @@
 ---
--host: tag_Env_Demo
+- host: tag_Env_Demo
 tasks:
   - name: Restore database
     mysql_db:
