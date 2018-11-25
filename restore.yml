@@ -11,6 +11,6 @@
       state: import
       target: /srv/backup/wordpress.sql
 
-  - name: restart Mysql
-    service: name=mariadb state=restarted
+#  - name: restart Mysql
+#    service: name=mariadb state=restarted
      
