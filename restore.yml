@@ -1,8 +1,8 @@
 ---
 - host: tag_Env_Demo
-tasks:
-  - name: Restore database
-    mysql_db:
-      name: wordpress
-      state: import
-      target: /srv/backup/wordpress.sql
+  tasks:
+    - name: Restore database
+      mysql_db:
+        name: wordpress
+        state: import
+        target: /srv/backup/wordpress.sql
