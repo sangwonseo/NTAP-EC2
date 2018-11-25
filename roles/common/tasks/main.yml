@@ -1,4 +1,9 @@
 ---
+- name: yum | enable rhui repository
+  yum_repository:
+    name: rhui
+    enabled: yes
+    
 #- name: Update repository
 #  command: yum-config-manager --enable rhui-REGION-rhel-server-extras rhui-REGION-rhel-server-optional
 
