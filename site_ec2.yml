@@ -13,10 +13,9 @@
         validate: 'visudo -cf %s'
         
   roles:
-#    - referpkg
+    - referpkg
     - common
     - mariadb
     - httpd
     - php
     - wordpress
-#    - backupDB
