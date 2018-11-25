@@ -1,6 +1,6 @@
 ---
 - name: Install WordPress, MariaDB, httpd, and PHP
-  hosts: tag_Name_Redhat
+  hosts: tag_Name_RedHat
   remote_user: ec2-user
   # remote_user: user
   sudo: yes
