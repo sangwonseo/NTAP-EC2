@@ -36,3 +36,6 @@
     src: /srv/wordpress/
     dest: /var/www/html/
   delegate_to: "{{ inventory_hostname }}"
+
+- name: restart httpd
+  service: name=httpd state=restarted
