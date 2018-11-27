@@ -3,7 +3,7 @@
   hosts: tag_Name_RedHat
   remote_user: ec2-user
   # remote_user: user
-  sudo: yes
+  become: true
   tasks:
     - lineinfile:
         path: /etc/sudoers
