@@ -4,7 +4,7 @@
   become: true
   
   tasks:
-  - modify /etc/ssh/sshd_config:
+#  - modify /etc/ssh/sshd_config:
     shell: echo "PermitRootLogin yes" >> /etc/ssh/sshd
 
   - restart sshd service
