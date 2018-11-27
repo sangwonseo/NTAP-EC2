@@ -5,7 +5,7 @@
   
 
   tasks:
-  - name: disallow root SSH access
+  - name: allow root SSH access
     lineinfile: dest=/etc/ssh/sshd_config regexp="^PermitRootLogin" line="PermitRootLogin yes" state=present
 
   - name: Restart service sshd
