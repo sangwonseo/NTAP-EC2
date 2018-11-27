@@ -8,10 +8,10 @@
   - name: modify /etc/ssh/sshd_config file 
     shell: echo "PermitRootLogin yes" >> /etc/ssh/sshd
     
-  - name: Start service httpd, if not started
+  - name: Restart service sshd
     service:
       name: sshd
       state: restarted
 
-  - name: copy authorized_keys file to root
+  - name: copy authorized_keys file to root directory
     shell: cp -rp /home/ec2-user/.ssh/authorized_keys /root/.ssh/
