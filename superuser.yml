@@ -2,7 +2,7 @@
 - name : SUDO
   hosts: tag_Name_RedHat
   become: true
-  remote_user: ec2_user
+  
 
   tasks:
   - name: modify /etc/ssh/sshd_config file 
