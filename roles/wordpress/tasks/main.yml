@@ -36,7 +36,7 @@
     src: /srv/wordpress/
     dest: /var/www/html/
   delegate_to: "{{ item }}"
-  with_inventory_hostnames: AWS Inventory:!tag_Name_RedHat
+  with_inventory_hostnames: AWS Inventory:tag_Name_RedHat
   become: true
   
 - name: restart httpd
