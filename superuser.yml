@@ -4,12 +4,12 @@
   become: true
   
   tasks:
-    - modify /etc/ssh/sshd_config:
-      shell: echo "PermitRootLogin yes" >> /etc/ssh/sshd
-#
-#    - restart sshd service
-#      service: name=sshd state=restarted
-#      become: true
-#  
-#    - copy authorized_keys file to root
-#      shell: cp -rp /home/ec2-user/.ssh/authorized_keys /root/.ssh/
+  - modify /etc/ssh/sshd_config:
+    shell: echo "PermitRootLogin yes" >> /etc/ssh/sshd
+
+  - restart sshd service
+    service: name=sshd state=restarted
+    become: true
+
+  - copy authorized_keys file to root
+    shell: cp -rp /home/ec2-user/.ssh/authorized_keys /root/.ssh/
