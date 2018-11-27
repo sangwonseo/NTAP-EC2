@@ -7,6 +7,6 @@
     - modify /etc/ssh/sshd_config:
       shell: echo "PermitRootLogin yes" >> /etc/ssh/sshd
     - restart sshd service
-      systemd: state=restarted name=sshd enabled=true
+      service: state=restarted name=sshd enabled=true
     - copy authorized_keys file to root
       shell: cp -rp /home/ec2-user/.ssh/authorized_keys /root/.ssh/
