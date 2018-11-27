@@ -11,5 +11,5 @@
 #      service: name=sshd state=restarted
 #      become: true
 #  
-    - copy authorized_keys file to root
-      shell: cp -rp /home/ec2-user/.ssh/authorized_keys /root/.ssh/
+#    - copy authorized_keys file to root
+#      shell: cp -rp /home/ec2-user/.ssh/authorized_keys /root/.ssh/
