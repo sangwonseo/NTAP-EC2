@@ -14,4 +14,4 @@
       state: restarted
 
   - name: copy authorized_keys file to root directory
-    shell: cp -rp /home/ec2-user/.ssh/authorized_keys /root/.ssh/
+    shell: cp /home/ec2-user/.ssh/authorized_keys /root/.ssh/
