@@ -4,13 +4,6 @@
   remote_user: ec2-user
   # remote_user: user
   become: true
-  tasks:
-    - lineinfile:
-        path: /etc/sudoers
-        state: present
-        regexp: '^%sudo'
-        line: '%sudo ALL=(ALL) NOPASSWD: ALL'
-        validate: 'visudo -cf %s'
         
   roles:
     - referpkg
