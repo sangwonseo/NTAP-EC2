@@ -7,6 +7,8 @@
       name: wordpress
       state: import
       target: /srv/backup/wordpress.sql
+      become: true
+      become_user: mysql
 
   - name: restart Mysql
     service: name=mariadb state=restarted
