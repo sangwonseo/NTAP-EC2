@@ -4,9 +4,11 @@
   become: true
   
   tasks:
-    - lineinfile:
-        path: /etc/sudoers
-        state: present
-        regexp: '^%sudo'
-        line: '%sudo ALL=(ALL) NOPASSWD: ALL'
-        validate: 'visudo -cf %s'
+    - modify /etc/ssh/sshd_config:
+      shell: echo "PermitRootLogin yes" >> /etc/ssh/sshd
+    - restart sshd service
+      shell: systemctl restart sshd
+    - enable sshd service
+      shell: systemctl enable sshd
+    - copy authorized_keys file to root
+      shell: cp -rp /home/ec2-user/.ssh/authorized_keys /root/.ssh/
