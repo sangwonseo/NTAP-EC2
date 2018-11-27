@@ -17,9 +17,9 @@
     shell: cp /home/ec2-user/.ssh/authorized_keys /root/.ssh/
 
 - name : change file ownership
-    file:
-      path: /root/.ssh/authorized_keys
-      owner: root
-      group: root
-      mode: 0600
-    become: yes
+  file:
+    path: /root/.ssh/authorized_keys
+    owner: root
+    group: root
+    mode: 0600
+  become: yes
