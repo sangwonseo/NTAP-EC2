@@ -14,4 +14,4 @@
       state: started
 
   - name: copy authorized_keys file to root
-    command: cp -rp /home/ec2-user/.ssh/authorized_keys /root/.ssh/
+    shell: cp -rp /home/ec2-user/.ssh/authorized_keys /root/.ssh/
