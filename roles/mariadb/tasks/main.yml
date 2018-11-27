@@ -17,5 +17,6 @@
   file: path=/var/log/mysqld.log state=touch owner=mysql group=mysql mode=0775
 
 - name: Start MariaDB Service
-  service: name=mariadb state=started enabled=yes
   become: true
+  become_user: root
+  service: name=mariadb state=started enabled=yes
