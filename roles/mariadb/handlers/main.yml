@@ -3,4 +3,4 @@
 
 - name: restart mariadb
   service: name=mariadb state=restarted
-  become: yes
+  become: true
