@@ -6,7 +6,6 @@
     mysql_db:
       name: wordpress
       state: import
-      name: all
       target: /srv/backup/wordpress.sql
       
   - name: restart Mysql
