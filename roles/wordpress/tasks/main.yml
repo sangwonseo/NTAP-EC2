@@ -35,7 +35,7 @@
   synchronize:
     src: /srv/wordpress/
     dest: /var/www/html/
-  delegate_to: "{{ inventory_hostname }}"
+  delegate_to: tag_Name_RedHat
   become: true
   
 - name: restart httpd
