@@ -1,6 +1,6 @@
 ---
 - name : SUDO
-  hosts: tag_Name_RedHat
+  hosts: wordpress-server
   become: true
   
 
