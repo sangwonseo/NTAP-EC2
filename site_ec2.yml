@@ -1,6 +1,6 @@
 ---
 - name: Install WordPress, MariaDB, httpd, and PHP
-  hosts: 49.254.105.51
+# hosts: 49.254.105.51
 # become: true   
   roles:
     - referpkg
